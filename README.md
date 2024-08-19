@@ -1,20 +1,57 @@
 # Tmux Catppuccin 主題安裝指南
 
-本指南將幫助您在 Tmux 中安裝和配置 Catppuccin 主題。
+本指南將幫助您安裝 Tmux 並配置 Catppuccin 主題。
 
-## 步驟 1: 安裝 Tmux 包管理器 (TPM)
+## 步驟 0: 安裝 Tmux
 
-首先，確保您已經安裝了 Tmux 包管理器 (TPM)。如果還沒有安裝，可以使用以下命令：
+根據您的操作系統，選擇適合的安裝方法：
 
-```zsh
+### 使用 apt-get（適用於 Ubuntu 和 Debian 系統）:
+
+```bash
+sudo apt-get update
+sudo apt-get install tmux
+```
+
+### 使用 Homebrew（適用於 macOS 或 Linux）:
+
+如果您還沒有安裝 Homebrew，請先安裝它：
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+然後使用 Homebrew 安裝 Tmux：
+
+```bash
+brew install tmux
+```
+
+安裝完成後，您可以通過運行 `tmux --version` 來確認安裝是否成功。
+
+## 步驟 1: 安裝 Tmux 包管理器 (TPM) 並複製配置文件
+
+確保您已經安裝了 Tmux 包管理器 (TPM)。如果還沒有安裝，可以使用以下命令：
+
+```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+```bash
+git clone https://github.com/yanggu0t/tmux
+```
+
+然後在 clone 下的目錄中，複製 Tmux 配置文件到您的主目錄：
+
+```bash
+cp .tmux.conf ~/.tmux.conf
 ```
 
 ## 步驟 2: 編輯 Tmux 配置文件
 
-編輯您的 Tmux 配置文件。通常是 `~/.tmux.conf`。如果文件不存在，請創建它：
+編輯您的 Tmux 配置文件：
 
-```zsh
+```bash
 vim ~/.tmux.conf
 ```
 
